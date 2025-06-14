@@ -1,0 +1,417 @@
+/* --- BASE ET POLICES --- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit-Regular', 'Kanit-ExtraBold', Arial, sans-serif;
+}
+
+@font-face {
+  font-family: 'Kanit-Regular';
+  src: url(../asset/fonts/Kanit/Kanit-Regular.ttf);
+}
+@font-face {
+  font-family: 'Kanit-ExtraBold';
+  src: url(../asset/fonts/Kanit/Kanit-ExtraBold.ttf);
+  font-weight: 800;
+}
+@font-face {
+  font-family: 'inter-regular';
+  src: url(../asset/fonts/inter/Inter_18pt-Regular.ttf) format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+body {
+  background: #fff;
+  color: #222;
+  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 5vw;
+  background: #E0ECDE;
+}
+.navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 24px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: #222;
+  font-family: 'Kanit-Regular', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+.navbar ul li a:hover,
+.navbar ul li.active a {
+  color: #BC3838;
+}
+.logo {
+  width: 30%;
+  height: auto;
+  margin-right: 24px;
+}
+
+/* --- BANNIÈRE --- */
+.banner {
+   width: 99vw;
+   position: relative;
+}
+.banner img {
+    width: 99vw;
+    max-width: none;
+    border-radius: 0 0 20px 20px;
+}
+
+
+/* --- SERVICES --- */
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 32px auto;
+  font-size: 22px;
+  color: #222;
+}
+.services > div {
+  background: #E0ECDE;
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-weight: 600;
+}
+
+/* --- BIENVENUE ET SANTE PLUS --- */
+.bienvenue {
+  text-align: center;
+  margin: 32px auto;
+}
+.santeplus {
+  background: #E0ECDE;
+  border-radius: 16px;
+  padding: 12px 32px;
+  display: inline-block;
+  font-family: 'Kanit-ExtraBold', sans-serif;
+  font-size: 36px;
+  font-weight: 800;
+  color: #BC3838;
+  margin: 16px 0;
+}
+.questions.reponse {
+  background: #68B2A0;
+  border-radius: 20px;
+  padding: 18px 32px;
+  display: inline-block;
+  font-family: 'Kanit-Regular', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  margin: 16px 0;
+}
+
+/* --- BANNERS ET ÉQUIPE --- */
+.banner1, .banner2, .équipe {
+  text-align: center;
+  margin: 24px auto;
+}
+.banner1 h1, .banner2 h1, .équipe {
+  font-size: 28px;
+  color: #222;
+  font-weight: 700;
+}
+.banner2 p {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* --- GRID ÉQUIPE --- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 32px auto;
+}
+.item {
+  background: #E0ECDE;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+.item-5 {
+  grid-column: span 2;
+}
+
+/* --- ICONES --- */
+.icon-section {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin: 32px auto;
+  flex-wrap: wrap;
+}
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  font-size: 20px;
+  gap: 8px;
+}
+.icon-box img {
+  width: 48px;
+  height: 48px;
+}
+
+/* --- URGENCE ET FORMULAIRE --- */
+.inspi {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin: 40px auto;
+  flex-wrap: wrap;
+}
+.urgence-box {
+  width: 350px;
+  background: #BC383880;
+  border-radius: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  margin-bottom: 24px;
+}
+.urgence-box h2 {
+  color: #BC3838;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.urgence-numero {
+  font-size: 28px;
+  font-weight: bold;
+  color: #BC3838;
+  margin-bottom: 8px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px;
+  background: #68B2A0;
+  padding: 24px 16px;
+  border-radius: 40px 0;
+  margin-bottom: 24px;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 16px;
+  background: #E0ECDE;
+  box-sizing: border-box;
+}
+.contact-form button {
+  margin-top: 10px;
+  padding: 10px 0;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #BC3838;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* --- AMBULANCE --- */
+.ambulance {
+  width: 220px;
+  display: block;
+  margin: 32px auto;
+  border-radius: 16px;
+}
+
+/* --- FAQ --- */
+.faq, .faq1 {
+  text-align: center;
+  margin: 32px auto;
+}
+.faq1 > div {
+  background: #E0ECDE;
+  border-radius: 12px;
+  margin: 8px auto;
+  padding: 10px 0;
+  max-width: 400px;
+  font-size: 18px;
+}
+
+/* --- FOOTER --- */
+.footer {
+  width: 100%;
+  background: #95C8C7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+  font-size: 18px;
+  color: #222;
+}
+.footer a {
+  color: #BC3838;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* --- CONTACT PAGE --- */
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px auto;
+  width: 100%;
+  max-width: 1200px;
+}
+.contactposte {
+  background-color: #E0ECDE;
+  border-radius: 20px;
+  padding: 24px 32px;
+  margin-bottom: 24px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+.iconecontact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.iconecontact img {
+  width: 36px;
+  height: 36px;
+}
+.textcontact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 18px;
+  color: #222;
+}
+.textcontact a {
+  color: #BC3838;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 2vw;
+  }
+  .navbar ul {
+    gap: 10px;
+  }
+  .banner {
+    margin: 16px auto 0 auto;
+  }
+  .services {
+    flex-direction: column;
+    gap: 12px;
+    font-size: 18px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .item img {
+    height: 180px;
+  }
+  .icon-section {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .inspi {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .urgence-box,
+  .contact-form {
+    width: 98%;
+    max-width: 400px;
+    padding: 18px 8px;
+    border-radius: 20px;
+  }
+  .ambulance {
+    width: 140px;
+    margin: 24px auto;
+  }
+  .faq1 > div {
+    font-size: 16px;
+    padding: 8px 0;
+  }
+  .center,
+  .contactposte {
+    max-width: 98vw;
+    padding: 12px 2vw;
+  }
+  .contactposte {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 8px 1vw;
+    font-size: 14px;
+  }
+  .banner img {
+    border-radius: 10px;
+  }
+  .santeplus {
+    font-size: 22px;
+    padding: 8px 10px;
+  }
+  .questions.reponse {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+  .footer {
+    font-size: 14px;
+    padding: 12px 0;
+  }
+  .contactposte {
+    padding: 8px 4px;
+    gap: 8px;
+  }
+  .textcontact {
+    font-size: 14px;
+  }
+}
